@@ -5,7 +5,7 @@
 
 It'll look like this:
 
-![](allthevars.jpg)
+![](screenshot.jpg)
 
 By default, variables starting with underscores won't be shown. If you want to see *absolutely all the variables*, which includes them, add `remove_underscored="no"` to the tag.
 
