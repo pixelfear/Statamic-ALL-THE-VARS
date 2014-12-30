@@ -27,6 +27,10 @@ class Plugin_all_the_vars extends Plugin
 			}
 
 		}
+		
+        	if ($this->fetchParam('sort', false, null, true)) {
+            		ksort($context);
+        	}		
 
 		// Get extra page data
 		$this->page_data = Content::get(URL::getCurrent());
