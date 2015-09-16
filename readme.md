@@ -10,3 +10,6 @@ It'll look like this:
 By default, variables starting with underscores won't be shown. If you want to see *absolutely all the variables*, which includes them, add `remove_underscored="no"` to the tag.
 
 Google Webfonts is used because I dislike boring fonts. If this is an issue, add `websafe_font="yes"`.
+
+If you want to output *all the variables* as JSON, add `json_format="yes"` to the tag.
+
