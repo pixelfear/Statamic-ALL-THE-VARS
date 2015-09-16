@@ -37,7 +37,8 @@ class Plugin_all_the_vars extends Plugin
 
 		// Output as JSON
 		if ( $this->fetchParam('json_format', false, null, true)) {
-			echo json_encode($context, JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_HEX_AMP | JSON_UNESCAPED_UNICODE);
+			header('Content-Type: application/json');
+			echo json_encode($context);
 
 			die();
 		}
