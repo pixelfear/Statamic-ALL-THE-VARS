@@ -35,6 +35,13 @@ class Plugin_all_the_vars extends Plugin
 		// Get extra page data
 		$this->page_data = Content::get(URL::getCurrent());
 
+		// Output as JSON
+		if ( $this->fetchParam('json_format', false, null, true)) {
+			echo json_encode($context, JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_HEX_AMP | JSON_UNESCAPED_UNICODE);
+
+			die();
+		}
+
 		// CSS
 		$output = $this->css->link('all_the_vars');
 		if ( ! $this->fetchParam('websafe_font', false, null, true)) {
